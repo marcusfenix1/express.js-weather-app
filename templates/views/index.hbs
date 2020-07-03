@@ -9,9 +9,30 @@
 </head>
 
 <body>
-    {{>header}}
-    <h1>HandleBAR</h1>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p>City:
+        <p id="message-1"></p>
+        </p>
+        <p>Current temperature:
+        <p id="message-2"></p>
+        </>
+        <p>Feels like temperature:
+        <p id="message-3"></p>
+        </p>
+    </div>
+
     {{>footer}}
+
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
