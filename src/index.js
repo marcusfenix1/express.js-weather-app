@@ -46,7 +46,8 @@ app.get("/weather", (req, res) => {
     res.send({
       currentTemp: currentWeather.currentTemp,
       feelsLikeTemp: currentWeather.feelsLikeTemp,
-      address: req.query.address,
+      address: currentWeather.location,
+      currentHumidity: currentWeather.currentHumidity,
     });
   })();
 

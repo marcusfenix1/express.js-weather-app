@@ -18,6 +18,8 @@ const getWeather = async (address) => {
 
     const currentTemp = response.data.current.temperature;
     const currentFeelsLikeTemp = response.data.current.feelslike;
+    const currentHumidity = response.data.current.humidity;
+    const location = response.data.location.name;
 
     console.log(currentTemp);
 
@@ -25,7 +27,12 @@ const getWeather = async (address) => {
       `The temperature is ${currentTemp}. It's feels like ${currentFeelsLikeTemp}`
     );
 
-    return { currentTemp: currentTemp, feelsLikeTemp: currentFeelsLikeTemp };
+    return {
+      currentTemp: currentTemp,
+      feelsLikeTemp: currentFeelsLikeTemp,
+      currentHumidity: currentHumidity,
+      location: location,
+    };
   } catch (err) {
     console.log("something get wrong in getting weather");
   }
