@@ -19,7 +19,7 @@ const getWeather = async (address) => {
     const currentTemp = response.data.current.temperature;
     const currentFeelsLikeTemp = response.data.current.feelslike;
     const currentHumidity = response.data.current.humidity;
-    const location = response.data.location.name;
+    const location = geo.data.features[0].place_name;
 
     console.log(currentTemp);
 
